@@ -1,6 +1,5 @@
 
 class MediaPlayer {
-
   constructor(config) {
     this.media = config.video;
     this.plugins = config.plugins || [];
@@ -10,22 +9,15 @@ class MediaPlayer {
     this.pauseIconClassName = config.pauseIconClassName || '';
     this.unMuteIconClassName = config.unMuteIconClassName || '';
     this.muteIconClassName = config.muteIconClassName || '';
-
-    this.muteUnmuteButton.onclick = () => {
-      this.toggleUnmute();
-    };
-
-    this.playPauseButton.onclick = () => {
-      this.togglePlay();
-    };
-    
+    this.muteUnmuteButton.onclick = () => this.toggleUnmute();
+    this.playPauseButton.onclick = () => this.togglePlay();
     this.mute();
     this.pause();
-    this._initPlugins();
+    this.initPlugins();
   }
 
-  _initPlugins() {
-    this.plugins.forEach(plugin => {
+  initPlugins() {
+    this.plugins.forEach((plugin) => {
       plugin.run(this);
     });
   }
@@ -50,8 +42,9 @@ class MediaPlayer {
     this.media.muted = false;
   }
 
-  togglePlay() { (this.media.paused) ? this.play() : this.pause(); }
-  toggleUnmute() { (this.media.muted) ? this.unMute() : this.mute(); }
-};
+  togglePlay() { return (this.media.paused) ? this.play() : this.pause(); }
+
+  toggleUnmute() { return (this.media.muted) ? this.unMute() : this.mute(); }
+}
 
 export default MediaPlayer;
