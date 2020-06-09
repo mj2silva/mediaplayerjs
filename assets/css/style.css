@@ -98,3 +98,21 @@ footer {
   justify-content: center;
   height: 50px;
 }
+
+@media(max-width: 600px) {
+  .video-player__video {
+    width: 100%;
+  }
+}
+
+@media(max-width: 900px) {
+  .video-player__video {
+    width: 90%;
+  }
+}
+
+@media(max-width: 1366px) {
+  .video-player__video {
+    width: 70%;
+  }
+}
