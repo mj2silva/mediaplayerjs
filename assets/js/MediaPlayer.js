@@ -11,6 +11,9 @@ class MediaPlayer {
     this.muteIconClassName = config.muteIconClassName || '';
     this.muteUnmuteButton.onclick = () => this.toggleUnmute();
     this.playPauseButton.onclick = () => this.togglePlay();
+  }
+
+  run() {
     this.mute();
     this.pause();
     this.initPlugins();

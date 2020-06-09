@@ -55,6 +55,42 @@ main {
   color: white;
 }
 
+.comments {
+  width: 80%;
+  margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments__title {
+  color: #000000;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+  border: solid 1px #fafd25;
+  border-radius: 15px;
+  padding: 8px;
+}
+
+
+.comment__author {
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+.comment__content {
+  text-align: justify;
+  margin: 4px 0;
+}
+
+.comment__date {
+  font-weight: bold;
+  align-self: flex-end;
+}
+
 footer {
   background-color: #fafd25;
   display: flex;
